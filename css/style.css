@@ -1,0 +1,61 @@
+/*************** COMMON/CONTAINER *****************/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(70, 70, 70);
+}
+
+
+
+/************* HEADER *************/
+
+
+
+
+
+/************* MAIN *************/
+
+.contenitore{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+}
+
+.square{
+    width: 50px;
+    height: 50px;
+    border: solid 1px black;
+}
+
+.color{
+    background-color: rgb(173, 130, 77);
+}
+
+
+/************* FOOTER *************/
+
+
+
+
+
+/************* RESPONSIVE *************/
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+@media screen and (max-width: 576px) {
+ 
+}
