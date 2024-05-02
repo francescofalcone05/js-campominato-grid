@@ -43,7 +43,7 @@ text-align: center;
 .square{
     width: 50px;
     height: 50px;
-    border: solid 1px black;
+    border: solid 1px rgb(187, 183, 183);
     text-align: center;
     line-height: 3rem;
 }

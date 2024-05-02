@@ -7,11 +7,12 @@ let tabella = document.getElementById('campo');
 
 start.addEventListener('click', function () {
 
+    addAndRemove(tabella, start)
     //rimuovo la classe hide dalla tabella
-    tabella.classList.remove('hide')
+    //tabella.classList.remove('hide')
 
     //aggiungo la classe hide al bottone
-    start.classList.add('hide')
+    // start.classList.add('hide')
 
 })
 
@@ -36,7 +37,7 @@ function creaElemento(numero) {
     div.classList.add('square');
 
     //numero i quadrati
-    div.innerText = numero;
+    // div.innerText = numero;
 
     //stampo in pagina i div
     tabella.append(div);
@@ -46,15 +47,34 @@ function creaElemento(numero) {
 
         //aggiungi o rimuovi la classe color
         div.classList.toggle('color');
+        console.log(numero)
 
-        let colorato = document.getElementsByClassName('color').innerText;
-        console.log(colorato);
+        //se dentro l'innerText non c'e` nulla
+        if (div.innerText == '') {
+            //aggiungi inerText
+            div.innerText = numero;
+        } else {
+            
+            //altrimenti svuota innerText
+            div.innerText = '' 
+        }
     });
 
     return div
 
 };
 
+function addAndRemove(elemento1, elemento2) {
+
+    //rimuovo la classe hide 
+    elemento1.classList.remove('hide');
+
+    //aggiungo la classe hide 
+    elemento2.classList.add('hide');
+
+    return elemento1, elemento2
+
+}
 
 
 /***************************************/
