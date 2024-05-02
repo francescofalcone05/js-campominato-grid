@@ -7,6 +7,7 @@
 
 body{
     background-color: rgb(70, 70, 70);
+    padding-top: 1rem;
 }
 
 
@@ -29,8 +30,20 @@ text-align: center;
     background-color: green;
 }
 
-.contenitore{
+.contenitore_easy{
     width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+}
+.contenitore_medium{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+}
+.contenitore_hard{
+    width: 350px;
     display: flex;
     flex-wrap: wrap;
     margin: 5rem auto;
@@ -52,6 +65,11 @@ text-align: center;
     background-color: rgb(173, 130, 77);
 }
 
+#difficolty{
+
+    font-size: 2rem;
+    padding: 0.5rem;
+}
 
 /************* FOOTER *************/
 
