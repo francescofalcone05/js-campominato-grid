@@ -11,9 +11,10 @@ let level = document.getElementById('difficolty');
 
 start.addEventListener('click', function () {
 
-    /*se voglio tenere bottone e select in pagina durante il gioco,
-     per poter cambiare il livello anche dopo averlo selezionato la prima volta */
-    tabella.innerHTML = ""
+    // /*se voglio tenere bottone e select in pagina durante il gioco,
+    //  per poter cambiare il livello anche dopo averlo selezionato la prima volta */
+     tabella.innerHTML = ""
+     tabella.classList = ""
 
     // //se il livello selezionato e` Easy
     if (level.value == 'easy') {
@@ -39,6 +40,7 @@ start.addEventListener('click', function () {
 
 //funzione per rendere visibile la tabella e generare un tot di di quadrati
 function generatedTabella(numQuadrati, classeToAdd) {
+
 
     // rimuovo la classe hide dalla tabella
     tabella.classList.remove('hide')
