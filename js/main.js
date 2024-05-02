@@ -11,8 +11,7 @@ let level = document.getElementById('difficolty');
 
 start.addEventListener('click', function () {
 
-    // /*se voglio tenere bottone e select in pagina durante il gioco,
-    //  per poter cambiare il livello anche dopo averlo selezionato la prima volta */
+    //ad ogni giro svuoto la tabella e la sua classList
      tabella.innerHTML = ""
      tabella.classList = ""
 
@@ -37,6 +36,11 @@ start.addEventListener('click', function () {
 
 
 /**************FUNCTIONS****************/
+
+//creo una funzione per generare un numero random da min a max
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 //funzione per rendere visibile la tabella e generare un tot di di quadrati
 function generatedTabella(numQuadrati, classeToAdd) {
