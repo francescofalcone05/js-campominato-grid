@@ -7,64 +7,28 @@ let tabella = document.getElementById('campo');
 //creo variabile per il select
 let level = document.getElementById('difficolty');
 
+
+
 start.addEventListener('click', function () {
 
     /*se voglio tenere bottone e select in pagina durante il gioco,
-     per poter cambiare il livello anche dopo averlo selezionato la prima volta */ 
+     per poter cambiare il livello anche dopo averlo selezionato la prima volta */
     tabella.innerHTML = ""
 
-    //se il livello selezionato e` Easy
+    // //se il livello selezionato e` Easy
     if (level.value == 'easy') {
-        // rimuovo la classe hide dalla tabella
-        tabella.classList.remove('hide')
-        //aggiungi la classe container al contenitore a secondo del livello selezionato
-        tabella.classList.add('contenitore_easy')
+        //richiamo funzione per creare e stampare la tabella a seconda del livello
+        generatedTabella(100, 'contenitore_easy')
 
-        //se voglio nascondere bottone e select una volta scelto il livello aggiungo la classe hide
-        //start.classList.add('hide')
-        //level.classList.add('hide')
-
-        for (let i = 1; i < 101; i++) {
-
-            //richiamo funzione
-            let elemento = creaElemento(i);
-
-        }
-
-    //altrimenti se il livello selezionato e` Medium
+        //altrimenti se il livello selezionato e` Medium
     } else if (level.value == 'medium') {
-        // rimuovo la classe hide dalla tabella
-        tabella.classList.remove('hide')
-        //aggiungi la classe container al contenitore a secondo del livello selezionato
-        tabella.classList.add('contenitore_medium')
+        //richiamo funzione per creare e stampare la tabella a seconda del livello
+        generatedTabella(81, 'contenitore_medium')
 
-        //se voglio nascondere bottone e select una volta scelto il livello aggiungo la classe hide
-        //start.classList.add('hide')
-        //level.classList.add('hide')
-
-        for (let i = 1; i < 82; i++) {
-
-            //richiamo funzione
-            let elemento = creaElemento(i);
-
-        }
-    //altrimenti se il livello selezionato e` Hard
+        //altrimenti se il livello selezionato e` Hard
     } else if (level.value == 'hard') {
-        // rimuovo la classe hide dalla tabella
-        tabella.classList.remove('hide')
-        //aggiungi la classe container al contenitore a secondo del livello selezionato
-        tabella.classList.add('contenitore_hard')
-
-        //se voglio nascondere bottone e select una volta scelto il livello aggiungo la classe hide
-        //start.classList.add('hide')
-        //level.classList.add('hide')
-
-        for (let i = 1; i < 50; i++) {
-
-            //richiamo funzione
-            let elemento = creaElemento(i);
-
-        }
+        //richiamo funzione per creare e stampare la tabella a seconda del livello
+        generatedTabella(49, 'contenitore_hard')
 
     }
 
@@ -73,7 +37,29 @@ start.addEventListener('click', function () {
 
 /**************FUNCTIONS****************/
 
-//funzione per creare un elemento e add\remove classi 
+//funzione per rendere visibile la tabella e generare un tot di di quadrati
+function generatedTabella(numQuadrati, classeToAdd) {
+
+    // rimuovo la classe hide dalla tabella
+    tabella.classList.remove('hide')
+    //aggiungi la classe container al contenitore a secondo del livello selezionato
+    tabella.classList.add(classeToAdd)
+
+    //se voglio nascondere bottone e select una volta scelto il livello aggiungo la classe hide
+    //start.classList.add('hide')
+    //level.classList.add('hide')
+
+    for (let i = 1; i <= numQuadrati; i++) {
+
+        //richiamo funzione
+        let elemento = creaElemento(i);
+
+    }
+
+}
+
+
+//funzione per creare un elemento ed al click add\remove classi 
 function creaElemento(numero) {
 
     //creo un elemento div
@@ -109,8 +95,4 @@ function creaElemento(numero) {
     return div
 
 };
-
-
-
-
 /***************************************/
